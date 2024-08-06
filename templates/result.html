@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraped Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- <br>
+        <br>
+        <br>
+        <br>
+        <br><br><br><br> -->
+        <h1>Web Scraper</h1>
+        <h1>Scraped Data from {{ urli }}</h1>
+        <h2>Title: {{ title }}</h2>
+        <p><strong>Description:</strong> {{ description }}</p>
+        
+        <h3>Headings</h3>
+        {% for level, heading_list in headings.items() %}
+            {% if heading_list %}
+                <!-- <h4>{{ level.upper() }}</h4> -->
+                <ul>
+                    {% for heading in heading_list %}
+                        <li>{{ heading }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+        
+        <h3>Links</h3>
+        <ul>
+            {% for link in links %}
+                <li><a href="{{ link.href }}" target="_blank">{{ link.text }}</a></li>
+            {% endfor %}
+        </ul>
+        <a href="/">Go back</a>
+    </div>
+</body>
+</html>
