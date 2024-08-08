@@ -26,10 +26,10 @@ A basic web scraper built using Python and Flask that extracts and displays doma
 ### Create a virtual environment:
 - python -m venv venv
 ### Activate the virtual environment:
--- On Windows
-- venv\Scripts\activate
--- On macOS/Linux
-- source venv/bin/activate
+- On Windows
+- - venv\Scripts\activate
+- On macOS/Linux
+- - source venv/bin/activate
 ### Install the required packages:
 - pip install -r requirements.txt
 
@@ -43,11 +43,11 @@ A basic web scraper built using Python and Flask that extracts and displays doma
 ## Project Structure
 
 web-scraper-flask/
-│
-├── app.py                 
-├── requirements.txt       
-├── templates/
-│   └── index.html         
-├── static/
-│   └── style.css          
-└── README.md              
+- │
+- ├── app.py                 
+- ├── requirements.txt       
+- ├── templates/
+- |   └── index.html         
+- ├── static/
+- │   └── style.css          
+- └── README.md              
